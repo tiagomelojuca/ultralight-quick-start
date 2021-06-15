@@ -23,6 +23,11 @@ cmake --build . --config Release
 
 > **Note**: _If you run the command cmake .. without any generators on Windows, it will usually select the default 32-bit Visual Studio version you have installed. To force CMake to generate 64-bit projects on Windows, use `cmake .. -DCMAKE_GENERATOR_PLATFORM=x64` instead of `cmake ..`_
 
+> **Note**: _If you run the command cmake .. without any generators on Windows, it may select the 32-bit MSVC toolchain (Ultralight needs the 64-bit MSVC toolchain instead).
+
+To force CMake to generate 64-bit projects instead, use
+cmake .. -DCMAKE_GENERATOR_PLATFORM=x64 instead of cmake .._
+
 ## 3. Run the app
 
 ### On macOS and Linux
